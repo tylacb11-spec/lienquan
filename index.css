@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+    animation: fadeIn 0.4s ease-out forwards;
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+.animate-slide-in-right {
+    animation: slideInRight 0.4s ease-out forwards;
+}
+
+@keyframes statUpdateGlow {
+    0% { box-shadow: 0 0 0px 0px rgba(0, 188, 212, 0); border-color: #4b5563; } /* gray-600 */
+    30% { box-shadow: 0 0 12px 4px rgba(0, 229, 255, 0.7); border-color: #22d3ee; } /* cyan-400 */
+    70% { box-shadow: 0 0 12px 4px rgba(0, 229, 255, 0.7); border-color: #22d3ee; } /* cyan-400 */
+    100% { box-shadow: 0 0 0px 0px rgba(0, 188, 212, 0); border-color: #4b5563; }
+}
+.animate-stat-update {
+    animation: statUpdateGlow 1.2s ease-in-out;
+}
+
+@keyframes championGlow {
+    0% { box-shadow: 0 0 8px #fde047, 0 0 12px #fde047; }
+    50% { box-shadow: 0 0 25px #facc15, 0 0 35px #facc15; }
+    100% { box-shadow: 0 0 8px #fde047, 0 0 12px #fde047; }
+}
+.animate-champion-glow {
+    animation: championGlow 2.5s ease-in-out infinite;
+}
